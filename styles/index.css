@@ -1,156 +1,94 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     font-family: monospace;
-    font-weight: bold;
-    box-sizing: border-box;
+    background-color: black;
 }
-body{
-    color: #fff;
-}
-
 /* ------------------------------------------------------------ CSS for Navbar ------------------------------------------------------------ */
-/* header div */
-#header{
-    width: 100%;
-    background-color: #080808;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Glowing border for navbar */
-.glowing-border{
-    width: 100%;
-    height: 75px;
-    position: relative;
-}
-.glowing-border::after, .glowing-border::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    animation: borderAnimation 10s linear infinite;
-}
-
-/* container div */
-.container{
-    padding: 12px 8%;
-    background-color: #080808;
-}
-
-/* Navbar Logo */
-.logo{
-    width: 40%;
-}
-
-/* Navbar Menu */
-#nav-menu{
+#nav-menu {
     display: flex;
-    align-items: center;
+    padding: 14px 8%;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0px 2px 10px #1e9040;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
-#nav-menu ul li{
-    display: inline;
+
+.nav-logo{
+    width: 12%;
+}
+.nav-logo > a > img {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
     list-style: none;
-    margin: 10px 20px;
 }
-#nav-menu ul li a{
-    color: #fff;
-    text-decoration: none;
+
+.menu li {
     font-size: 18px;
+    margin-left: 40px;
     position: relative;
 }
-#nav-menu ul li a::after{
+
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-menu ul li a::after {
     content: '';
-    width: 0;
+    width: 0px;
     height: 3px;
-    background: #22B14C;
+    background: #1e9040;
     position: absolute;
     left: 0;
     bottom:-6px;
     transition: 0.5s;
 }
-
-/* Sticky Navbar */
-nav.sticky{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 12px 8%;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* transition: 1s; */
-}
-#nav-menu ul li a:hover::after{
-    width: 100%;
+.menu > li:not(:last-child) > a:hover::after { /* Apply hover styles only to the rest of the a tags */
+    width: 100%; /* Full width of the text */
 }
 
-/* Navbar Resume Button */
-.resume{
-    background-color: #22B14C;
-    color: #080808;
-    padding: 10px;
+.resume {
+    background-color: #1e9040;
+    color: white;
+    padding: 8px 16px;
     border-radius: 10px;
-}
-#resume-link-1{
-    color: #080808;
-}
-#resume-link-1:hover::after{
-    display: none;
+    color: lightgray;
+    font-size: 18px;
+    text-decoration: none;
 }
 .resume:hover{
-        background-color: #198539;
+    background-color: #0B7841;
 }
 
-/* Animation keyframe for glowing border */
-@keyframes borderAnimation {
-    0% {
-    background: linear-gradient(to right, green, red, yellow, green, cyan, green, magenta, red);
-    }
-    16.67% {
-    background: linear-gradient(to right, green, green, red, yellow, green, cyan, green, magenta);
-    }
-    33.33% {
-    background: linear-gradient(to right, green, magenta, green, cyan, green, yellow, red, magenta);
-    }
-    50% {
-    background-color: green;
-    }
-    66.67% {
-    background: linear-gradient(to right, green, red, yellow, green, cyan, green, magenta green);
-    }
-    83.33% {
-    background: linear-gradient(to right, green, yellow, red, green, cyan, green, red, green);
-    }
-    100% {
-    background: linear-gradient(to right, green, magenta, green, cyan, green, yellow, red, magenta);
-    }
+.hamburger {
+    display: none;
 }
 
 /* ------------------------------------------------------------ CSS for Home ------------------------------------------------------------ */
-.home-content{
-    display: flex;
+section{
+    margin: 20vh auto;
+    padding: 20px;
     width: 80%;
-    /* border: 1px solid red; */
-    justify-content: space-between;
-    margin: 10% auto;
-    padding: 5%;
 }
-
 #home{
-    display: block;
-    margin: auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 30vh auto;
+    padding: 10px 40px;
 }
 .home-text{
     font-size: 24px;
     width: 55%;
+    color: white;
 }
 .home-text p{
     font-size: 16px;
@@ -162,10 +100,12 @@ nav.sticky{
 
 /* Auto typing text in home section */
 #auto-typing-text{
-    color: #22B14C;
+    color: #1e9040;
     display: inline-block;
+    font-weight: bold;
 }
 
+/* Profile image in home section */
 .home-image{
     width: 30%;
 }
@@ -174,8 +114,76 @@ nav.sticky{
     width: 250px;
     height: 250px;
     border-radius: 60%; 
-    border: 3px solid #22B14C;
+    box-shadow: 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040;
+}
+#resume-link-2{
+    display: block;
+    margin-top: 20px;
+    width: 90px;
 }
 
 
+/* ------------------------------------------------------------ CSS for About ------------------------------------------------------------ */
 
+.headings{
+    width: 24%;
+    text-align: center;
+    font-size: 42px;
+    border-radius: 10px;
+    margin: 2vh auto 7vh auto;
+    color: #1e9040;
+}
+
+.user-details{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.user-detail-name{
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040;
+    width: 25%;
+}
+.user-detail-name > img{
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.user-detail-intro{
+    box-shadow: 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040;
+    border-radius: 20px;
+    width: 60%;
+    padding: 20px;
+}
+.user-detail-intro > p{
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+}
+.about-skill-container{
+    margin: 3vh auto;
+    display: flex;
+    justify-content: space-between;
+}
+.about-skill{
+    padding: 10px;
+    width: 100px;
+    background-color: #1e9040;
+    border-radius: 20px;
+}
+.about-skill > p{
+    color: white;
+    text-align: center;
+    line-height: 22px;
+    background-color: #1e9040;
+}
+.about-skill > p > i{
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #1e9040;
+}
+.about-skill:hover{
+    /* box-shadow: 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040; */
+}
