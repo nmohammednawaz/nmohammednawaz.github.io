@@ -1,6 +1,5 @@
 const resumeLinkOne = document.getElementById("resume-button-1");
 const resumeLinkTwo = document.getElementById("resume-button-2");
-// const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('nav-menu');
 let scrollUpButton = document.getElementById("scoll-up");
 
@@ -16,13 +15,13 @@ function downloadAndOpenResume(event){
     link.click();
 }
 
-resumeLinkOne.addEventListener("click", (event) => {
-    downloadAndOpenResume(event);
-});
+// resumeLinkOne.addEventListener("click", (event) => {
+//     downloadAndOpenResume(event);
+// });
 
-resumeLinkTwo.addEventListener("click", (event) => {
-    downloadAndOpenResume(event);
-})
+// resumeLinkTwo.addEventListener("click", (event) => {
+//     downloadAndOpenResume(event);
+// })
     
 // Function to toggle the sticky class on the navbar
 function toggleStickyNavbar() {
