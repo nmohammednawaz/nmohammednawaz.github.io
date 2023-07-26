@@ -4,6 +4,7 @@
     font-family: monospace;
     background-color: black;
     color: white;
+    scroll-behavior: smooth;
 }
 /* ------------------------------------------------------------ CSS for Navbar ------------------------------------------------------------ */
 #nav-menu {
@@ -215,6 +216,7 @@ section{
     margin: 0 auto 5vh;
 
 }
+/* ------------------------------------------------------------ CSS for Skills ------------------------------------------------------------ */
 .teck-stacks{
     display: flex;
     justify-content: space-around;
@@ -257,6 +259,33 @@ section{
     color: white;
     padding: 5px;
 }
+
+/* ------------------------------------------------------------ CSS for Project ------------------------------------------------------------ */
   
-  /* ... your existing CSS ... */
-  
+.project-card{
+    width: 95%;
+    text-align: center;
+    margin-bottom: 7vh;
+}
+.project-card > img{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.project-card > h2{
+    text-align: center;
+    font-size: 26px;
+    margin: 2vh;
+}
+.project-tech-stack{
+    width: 30%;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-between;
+}
+.project-card > a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #1e9040;
+    width: 120px;
+}
