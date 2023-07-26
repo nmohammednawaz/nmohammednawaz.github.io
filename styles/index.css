@@ -106,11 +106,11 @@ section{
 }
 
 /* Profile image in home section */
-.home-img{
+.home-image{
     width: 30%;
 }
 
-.home-img img{
+.home-image img{
     width: 250px;
     height: 250px;
     border-radius: 60%; 
