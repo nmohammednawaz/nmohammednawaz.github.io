@@ -1,21 +1,27 @@
 const resumeLinkOne = document.getElementById("resume-link-1");
+const resumeLinkTwo = document.getElementById("resume-link-2");
 // const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('nav-menu');
 
-function downloadAndOpenResume(){
-
-}
-
-resumeLinkOne.addEventListener("click", function (event) {
+function downloadAndOpenResume(event){
     event.preventDefault();
-    var url = this.href;
-    window.open(url, "_blank");
+    var url = this.location.href;
+    const resumeLink = "./resume/MOHAMMED-NAWAZ-RESUME.pdf";
+    window.open(resumeLink, "_blank");
     var fileName = "MOHAMMED-NAWAZ-RESUME.pdf";
     var link = document.createElement("a");
     link.href = url;
     link.download = fileName;
     link.click();
+}
+
+resumeLinkOne.addEventListener("click", (event) => {
+    downloadAndOpenResume(event);
 });
+
+resumeLinkTwo.addEventListener("click", (event) => {
+    downloadAndOpenResume(event);
+})
     
 // Function to toggle the sticky class on the navbar
 function toggleStickyNavbar() {
