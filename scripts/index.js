@@ -1,5 +1,5 @@
-const resumeLinkOne = document.getElementById("resume-link-1");
-const resumeLinkTwo = document.getElementById("resume-link-2");
+const resumeLinkOne = document.getElementById("resume-button-1");
+const resumeLinkTwo = document.getElementById("resume-button-2");
 // const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('nav-menu');
 
