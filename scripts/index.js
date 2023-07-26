@@ -2,6 +2,7 @@ const resumeLinkOne = document.getElementById("resume-button-1");
 const resumeLinkTwo = document.getElementById("resume-button-2");
 // const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('nav-menu');
+let scrollUpButton = document.getElementById("scoll-up");
 
 function downloadAndOpenResume(event){
     event.preventDefault();
@@ -43,5 +44,28 @@ var typed = new Typed('#auto-typing-text', {
     loop: true
 });
 
+
+//   Scroll up button visibility
+window.addEventListener("scroll", function() {
+    var homeSection = document.getElementById("home");
+    var scrolled = window.scrollY;
+
+    if (scrolled < 50 && homeSection.getBoundingClientRect().bottom < window.innerHeight) {
+      // Hide the scroll-up button when the user is on the home section or when the bottom of the home section is visible in the viewport
+      scrollUpButton.style.display = "none";
+    } else {
+      // Show the scroll-up button in all other cases
+      scrollUpButton.style.display = "block";
+      scrollUpButton.style.position = "fixed";
+    }
+});
+
+// Function to smoothly scroll to the top when the scroll-up button is clicked
+scrollUpButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling animation
+    });
+});
   
   
