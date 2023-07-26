@@ -289,3 +289,8 @@ section{
     background-color: #1e9040;
     width: 120px;
 }
+
+.react-activity-calendar > img{
+    display: block;
+    margin: 20px auto;
+}
