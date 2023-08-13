@@ -1,27 +1,7 @@
 const resumeLinkOne = document.getElementById("resume-button-1");
 const resumeLinkTwo = document.getElementById("resume-button-2");
 const navbar = document.getElementById('nav-menu');
-let scrollUpButton = document.getElementById("scoll-up");
-
-function downloadAndOpenResume(event){
-    event.preventDefault();
-    var url = this.location.href;
-    const resumeLink = "./resume/MOHAMMED-NAWAZ-RESUME.pdf";
-    window.open(resumeLink, "_blank");
-    var fileName = "MOHAMMED-NAWAZ-RESUME.pdf";
-    var link = document.createElement("a");
-    link.href = url;
-    link.download = fileName;
-    link.click();
-}
-
-// resumeLinkOne.addEventListener("click", (event) => {
-//     downloadAndOpenResume(event);
-// });
-
-// resumeLinkTwo.addEventListener("click", (event) => {
-//     downloadAndOpenResume(event);
-// })
+let scrollUpButton = document.getElementById("scroll-up");
     
 // Function to toggle the sticky class on the navbar
 function toggleStickyNavbar() {
@@ -66,5 +46,5 @@ scrollUpButton.addEventListener("click", function() {
         behavior: 'smooth' // Smooth scrolling animation
     });
 });
-  
+
   
