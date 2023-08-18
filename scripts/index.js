@@ -47,4 +47,3 @@ scrollUpButton.addEventListener("click", function() {
     });
 });
 
-  

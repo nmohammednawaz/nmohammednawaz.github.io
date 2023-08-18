@@ -274,14 +274,13 @@ section{
     text-align: center;
 }
 
-/* ------------------------------------------------------------ CSS for Project ------------------------------------------------------------ */
-  
+/* ------------------------------------------------------------ CSS for Project ------------------------------------------------------------ */ 
 .project-card {
     width: 95%;
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin: auto;
+    margin: 5vh auto;
     padding: 30px 0px;
     /* border: 2px solid #1e9040; */
     border-radius: 20px;
@@ -307,7 +306,7 @@ section{
     justify-content: space-around;
     background: transparent;
 }
-.project-card div > h2{
+.project-card > div > h2{
     font-size: 18px;
     color: white;
     background: transparent;
@@ -321,13 +320,13 @@ section{
 }
 .project-title{
     margin: 3vh;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    color: #1e9040;
     background: transparent;
 }
 .project-description{
     width: 90%;
+    font-size: 16px;
     text-align: justify;
     margin: 3vh auto;
     background: transparent;
@@ -342,9 +341,9 @@ section{
 }
 .project-links > a{
     text-decoration: none;
-    padding: 10px;
-    font-size: 16px;
     display: block;
+    padding: 10px;
+    font-size: 18px;
     font-weight: bold;
     margin: 3vh auto;
     background-color: black;
