@@ -37,12 +37,8 @@
     right: 0;
     z-index: 999;
 }
-
-.nav-logo{
-    width: 12%;
-}
 .nav-logo > a > img {
-    width: 100%;
+    max-width: 160px;
 }
 
 .menu {
@@ -140,7 +136,7 @@ section{
     border: 3px solid #1e9040;
     position: fixed;
     bottom: 60px;
-    right: 50px;
+    right: 60px;
     cursor: pointer;
 }
 .scroll-up-button > i:hover{
@@ -226,7 +222,7 @@ section{
 }
 #resume-button-2{
     display: block;
-    width: 90px;
+    width: 160px;
 }
 
 /* ------------------------------------------------------------ CSS for Skills ------------------------------------------------------------ */
@@ -242,8 +238,7 @@ section{
 .front-end{
     border-right:2px solid  #1e9040;
 }
-.front-end,
-.back-end {
+.front-end, .back-end {
     padding: 10px;
     width: 50%;
     text-align: center;
@@ -256,7 +251,6 @@ section{
     display: flex;
     justify-content: space-around;
 }
-
 .skills-card {
     width: 65px;
     height: 80px;
@@ -267,7 +261,6 @@ section{
 .skills-card:hover{
     box-shadow: 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040;
 }
-
 .skills-card-img {
     display: block;
     margin: auto;
@@ -275,7 +268,6 @@ section{
     height: 45px;
     border-radius: 10px;
 }
-
 .skills-card-name {
     color: white;
     font-size: 10px;
@@ -288,7 +280,7 @@ section{
     margin: 0 auto 5vh;
 }
 .other-skills, .soft-skills{
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -475,4 +467,11 @@ section{
 }
 .footer-name{
     color: #1e9040;
+}
+
+/* ------------------------------------------------------------ CSS for Small Screens ---------------------------------------------------------- */
+
+/* Desktops, large screens: 1025px - 1200px */
+@media only screen and (min-width: 1080px) and (max-width: 1200px) {
+    
 }
