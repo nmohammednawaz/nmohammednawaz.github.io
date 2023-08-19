@@ -116,7 +116,7 @@ section{
 }
 #home{
     display: flex;
-    width: 60%;
+    width: 70%;
     justify-content: space-between;
     margin: 30vh auto;
     padding: 10px 40px;
@@ -554,3 +554,7 @@ section{
         font-size: 20px;
     }
 }
+
+
+/* -------------------------------------------- */
+

@@ -1,240 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <title>N MOHAMMED NAWAZ | PORTFOLIO</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="./styles/index.css">
+        <title>N MOHAMMED NAWAZ | PORTFOLIO</title>
+    </head>
+    <body>
 
-    <!-- Navbar -->
-    <nav id="nav-menu">
-        <div class="nav-logo">
-            <a href="#">
-                <img src="./images/logo.png" alt="">
-            </a>
-        </div>
-        <div class="navbar-menu" id="navbar-menu">
-            <ul class="menu" id="menu">
-                <li><a href="#" class="nav-link home">Home</a></li>
-                <li><a href="#about" class="nav-link about">About</a></li>
-                <li><a href="#skills" class="nav-link skills">Skills</a></li>
-                <li><a href="#projects" class="nav-link projects">Projects</a></li>
-                <li><a href="#statistics" class="nav-link Statistics">Statistics</a></li>
-                <li><a href="#contact" class="nav-link contact">Contact</a></li>
-                <li>
+        <!-- Navbar -->
+        <nav id="nav-menu">
+            <div class="nav-logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="menu" id="menu">
+                    <li><a href="#" class="nav-link home">Home</a></li>
+                    <li><a href="#about" class="nav-link about">About</a></li>
+                    <li><a href="#skills" class="nav-link skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link projects">Projects</a></li>
+                    <li><a href="#statistics" class="nav-link Statistics">Statistics</a></li>
+                    <li><a href="#contact" class="nav-link contact">Contact</a></li>
+                    <li>
+                        <a 
+                        href="./resume/N-Mohammed-Nawaz-Resume.pdf" 
+                        onclick="window.open('https://drive.google.com/file/d/15-9Se8zwcQ6AlaP7eazkLzw0WuA25qMe/view?usp=drive_link')"
+                        download="" target="_blank" class="nav-link resume" id="resume-button-1">
+                        &#11123; Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-text">
+                <h1>Hi👋<br>I'm N Mohammed Nawaz</h1>
+                <span id="auto-typing-text"></span>
+                <p>Versatile Full Stack Java Developer crafting high-quality solutions that seamlessly integrate front-end and back-end technologies. I excel in user experience and delivering remarkable applications. Let's build something together!</p>
+                <a href="#contact" id="connect-button">Let's connect <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="home-image">
+                <img class="home-img" src="./images/Nawaz_home.jpeg" alt="">
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about">    
+            <h1 class="headings">About Me</h1>
+            <div class="user-details">
+                <div id="user-detail-name">
+                    <img src="./images/Nawaz_dp.jpeg" alt="">
+                </div>
+                <div id="user-detail-intro">
+                    <p>
+                        I am a Bangalore-based Full Stack Developer skilled in Java, Spring Boot, SQL, REST APIs, and more. Holding a B.Tech in Computer Science from Presidency University, Bangalore, I blend solid education with practical coding. I completed a rigorous 35-week Full Stack Web Development course at Masai School, further enhancing my skills. With expertise in server-side applications, database management, and responsive websites, I embrace challenges to deliver impactful solutions. Committed to continuous learning, I aim to contribute meaningfully and grow in the dynamic realm of programming.
+                    </p>
+                    <div class="about-skill-container">
+                        <div class="about-skill">
+                            <p><i class="fa-solid fa-code"></i><br>1200+<br>Hrs Of Coding</p>
+                        </div>
+                        <div class="about-skill">
+                            <p><i class="fa-solid fa-diagram-project"></i><br>5+<br>Projects</p>
+                        </div>
+                        <div class="about-skill">
+                            <p><i class="fa-regular fa-lightbulb"></i><br>800+<br>DSA Problems</p>
+                        </div>
+                        <div class="about-skill">
+                            <p><i class="fa-solid fa-award"></i><br>200+<br>Hrs Of Softskills</p>
+                        </div>
+                    </div>
                     <a 
                     href="./resume/N-Mohammed-Nawaz-Resume.pdf" 
                     onclick="window.open('https://drive.google.com/file/d/15-9Se8zwcQ6AlaP7eazkLzw0WuA25qMe/view?usp=drive_link')"
                     download="" target="_blank" class="nav-link resume" id="resume-button-1">
                     &#11123; Resume</a>
-                </li>
-            </ul>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home">
-        <div class="home-text">
-            <h1>Hi👋<br>I'm N Mohammed Nawaz</h1>
-            <span id="auto-typing-text"></span>
-            <p>Versatile Full Stack Java Developer crafting high-quality solutions that seamlessly integrate front-end and back-end technologies. I excel in user experience and delivering remarkable applications. Let's build something together!</p>
-            <a href="#contact" id="connect-button">Let's connect <i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <div class="home-image">
-            <img class="home-img" src="./images/Nawaz_home.jpeg" alt="">
-        </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about">    
-        <h1 class="headings">About Me</h1>
-        <div class="user-details">
-            <div id="user-detail-name">
-                <img src="./images/Nawaz_dp.jpeg" alt="">
-            </div>
-            <div id="user-detail-intro">
-                <p>
-                    I am a Bangalore-based Full Stack Developer skilled in Java, Spring Boot, SQL, REST APIs, and more. Holding a B.Tech in Computer Science from Presidency University, Bangalore, I blend solid education with practical coding. I completed a rigorous 35-week Full Stack Web Development course at Masai School, further enhancing my skills. With expertise in server-side applications, database management, and responsive websites, I embrace challenges to deliver impactful solutions. Committed to continuous learning, I aim to contribute meaningfully and grow in the dynamic realm of programming.
-                </p>
-                <div class="about-skill-container">
-                    <div class="about-skill">
-                        <p><i class="fa-solid fa-code"></i><br>1200+<br>Hrs Of Coding</p>
-                    </div>
-                    <div class="about-skill">
-                        <p><i class="fa-solid fa-diagram-project"></i><br>5+<br>Projects</p>
-                    </div>
-                    <div class="about-skill">
-                        <p><i class="fa-regular fa-lightbulb"></i><br>800+<br>DSA Problems</p>
-                    </div>
-                    <div class="about-skill">
-                        <p><i class="fa-solid fa-award"></i><br>200+<br>Hrs Of Softskills</p>
-                    </div>
-                </div>
-                <a 
-                href="./resume/N-Mohammed-Nawaz-Resume.pdf" 
-                onclick="window.open('https://drive.google.com/file/d/15-9Se8zwcQ6AlaP7eazkLzw0WuA25qMe/view?usp=drive_link')"
-                download="" target="_blank" class="nav-link resume" id="resume-button-1">
-                &#11123; Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Scroll Up Button -->
-    <div class="scroll-up-button" id="scroll-up">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
-
-    <section id="skills">
-        <h1 class="headings">Skills</h1>
-        <div class="skill-set">
-            <h2>Technical Skills</h2>
-            <div class="teck-stacks">
-                <div class="front-end">
-                    <h3>Front-End</h3>
-                    <div class="skill-cards">
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://icon-library.com/images/html5-icon/html5-icon-13.jpg" alt="html_logo">
-                            <p class="skills-card-name">HTML</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" alt="css_logo">
-                            <p class="skills-card-name">CSS</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="js_logo">
-                            <p class="skills-card-name">JavaScript</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/jquery_logo_icon_167804.png" alt="jquery_logo">
-                            <p class="skills-card-name">jQuery</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="back-end">
-                    <h3>Back-End</h3>
-                    <div class="skill-cards">
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg" alt="html_logo">
-                            <p class="skills-card-name">Java</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://plugins.jetbrains.com/files/18622/305008/icon/pluginIcon.png" alt="html_logo">
-                            <p class="skills-card-name">Spring Boot</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://toppng.com/uploads/preview/hibernate-logo-11609364227r2rk6gphuk.png" alt="html_logo">
-                            <p class="skills-card-name">Hibernate</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" alt="html_logo">
-                            <p class="skills-card-name">Sql</p>
-                        </div>
-                        <div class="skills-card">
-                            <img class="skills-card-img" src="https://avatars.githubusercontent.com/u/45949248?s=200&v=4" alt="html_logo">
-                            <p class="skills-card-name">Lombok</p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="other-skills">
-            <h2>Built Tools</h2>
-            <div class="skill-cards">
-                <div class="skills-card">
-                    <img class="skills-card-img" src="./images/githubLogo.png" alt="jquery_logo">
-                    <p class="skills-card-name">Github</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png" alt="css_logo">
-                    <p class="skills-card-name">Netlify</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png" alt="js_logo">
-                    <p class="skills-card-name">Postman</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://dashboard.snapcraft.io/site_media/appmedia/2016/12/mysql.png" alt="jquery_logo">
-                    <p class="skills-card-name">Mysql Client</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://w7.pngwing.com/pngs/905/947/png-transparent-microsoft-visual-studio-code-alt-macos-bigsur-icon-thumbnail.png" alt="jquery_logo">
-                    <p class="skills-card-name">VSCode</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://blog.kakaocdn.net/dn/cTqexF/btq1Qod0a5p/q5LIAZUoVvWyAgQyKpcank/img.png" alt="jquery_logo">
-                    <p class="skills-card-name">STS</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://logowik.com/content/uploads/images/maven-apache3537.jpg" alt="jquery_logo">
-                    <p class="skills-card-name">Maven</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="./images/XAAMP.png" alt="jquery_logo">
-                    <p class="skills-card-name">XAAMP</p>
-                </div>
-            </div>  
-        </div>
-        <div class="soft-skills">
-            <h2>Soft Skills</h2>
-            <div class="skill-cards">
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://static.vecteezy.com/system/resources/thumbnails/000/577/853/small/6-01.jpg" alt="jquery_logo">
-                    <p class="skills-card-name">Leadership</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://cdn1.vectorstock.com/i/1000x1000/11/45/adaptability-icon-simple-element-from-life-skills-vector-34251145.jpg" alt="css_logo">
-                    <p class="skills-card-name">Adaptability</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://spopsprod.blob.core.windows.net/cp-cms/446099c6f88617c44da1/default" alt="js_logo">
-                    <p class="skills-card-name">Team Work</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR4EUiv30BezlO637MN7iA2oekhWA1F0HCvA&usqp=CAU" alt="jquery_logo">
-                    <p class="skills-card-name">Communication</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://static.vecteezy.com/system/resources/thumbnails/009/242/229/small_2x/problem-solving-outline-icon-free-vector.jpg" alt="jquery_logo">
-                    <p class="skills-card-name">Problem Solving</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://icon-library.com/images/learn-icon-png/learn-icon-png-26.jpg" alt="jquery_logo">
-                    <p class="skills-card-name">Self Learning</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://static.vecteezy.com/system/resources/previews/010/948/779/original/time-management-logo-template-check-mark-with-clock-icon-design-free-vector.jpg" alt="jquery_logo">
-                    <p class="skills-card-name">Time Management</p>
-                </div>
-                <div class="skills-card">
-                    <img class="skills-card-img" src="https://c8.alamy.com/comp/RHPN14/patience-icon-thin-outline-creativepatience-design-from-soft-skills-collection-web-design-apps-software-and-print-usage-RHPN14.jpg" alt="jquery_logo">
-                    <p class="skills-card-name">Perseverance</p>
-                </div>
-            </div>  
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h1 class="headings">Projects</h1>
-        <div class="slider-container">
-            <div class="slider">
-              <!-- Project cards -->
-                <div class="project-card">
-                    <div>
-                        <h2>Teck Stacks Used</h2>
-                        <div class="project-tech-stack">
+        <!-- Scroll Up Button -->
+        <div class="scroll-up-button" id="scroll-up">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+
+        <section id="skills">
+            <h1 class="headings">Skills</h1>
+            <div class="skill-set">
+                <h2>Technical Skills</h2>
+                <div class="teck-stacks">
+                    <div class="front-end">
+                        <h3>Front-End</h3>
+                        <div class="skill-cards">
                             <div class="skills-card">
                                 <img class="skills-card-img" src="https://icon-library.com/images/html5-icon/html5-icon-13.jpg" alt="html_logo">
                                 <p class="skills-card-name">HTML</p>
@@ -248,6 +117,15 @@
                                 <p class="skills-card-name">JavaScript</p>
                             </div>
                             <div class="skills-card">
+                                <img class="skills-card-img" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/jquery_logo_icon_167804.png" alt="jquery_logo">
+                                <p class="skills-card-name">jQuery</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back-end">
+                        <h3>Back-End</h3>
+                        <div class="skill-cards">
+                            <div class="skills-card">
                                 <img class="skills-card-img" src="https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg" alt="html_logo">
                                 <p class="skills-card-name">Java</p>
                             </div>
@@ -256,109 +134,231 @@
                                 <p class="skills-card-name">Spring Boot</p>
                             </div>
                             <div class="skills-card">
-                                <img class="skills-card-img" src="https://avatars.githubusercontent.com/u/45949248?s=200&v=4" alt="html_logo">
-                                <p class="skills-card-name">Lombok</p>
+                                <img class="skills-card-img" src="https://toppng.com/uploads/preview/hibernate-logo-11609364227r2rk6gphuk.png" alt="html_logo">
+                                <p class="skills-card-name">Hibernate</p>
                             </div>
                             <div class="skills-card">
                                 <img class="skills-card-img" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" alt="html_logo">
                                 <p class="skills-card-name">Sql</p>
                             </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="./images/projects/Book_My_Bus_Logo.png" alt="" class="project-logo">
-                        <h1 class="project-title">Book My Bus</h1>
-                        <p class="project-description">An intuitive online platform for bus reservations, providing users easy
-                            booking while enabling admins to manage routes, buses, and users.</p>
-                    </div>
-                    <div>
-                        <div class="project-links">
-                            <a href="https://github.com/nmohammednawaz/Book-My-Bus" class="project-github-link" target="_blank">Explore Code <i class="fa-brands fa-github"></i></a>
-                            <a href="https://book-my-bus.netlify.app/" class="project-deployed-link" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#" class="project-demo-link" target="_blank">Watch Demo <i class="fa-solid fa-eye"></i></a>
+                            <div class="skills-card">
+                                <img class="skills-card-img" src="https://avatars.githubusercontent.com/u/45949248?s=200&v=4" alt="html_logo">
+                                <p class="skills-card-name">Lombok</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="dots-container">
-              <!-- Dots will be added dynamically here -->
+            <div class="other-skills">
+                <h2>Built Tools</h2>
+                <div class="skill-cards">
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="./images/githubLogo.png" alt="jquery_logo">
+                        <p class="skills-card-name">Github</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png" alt="css_logo">
+                        <p class="skills-card-name">Netlify</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png" alt="js_logo">
+                        <p class="skills-card-name">Postman</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://dashboard.snapcraft.io/site_media/appmedia/2016/12/mysql.png" alt="jquery_logo">
+                        <p class="skills-card-name">Mysql Client</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://w7.pngwing.com/pngs/905/947/png-transparent-microsoft-visual-studio-code-alt-macos-bigsur-icon-thumbnail.png" alt="jquery_logo">
+                        <p class="skills-card-name">VSCode</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://blog.kakaocdn.net/dn/cTqexF/btq1Qod0a5p/q5LIAZUoVvWyAgQyKpcank/img.png" alt="jquery_logo">
+                        <p class="skills-card-name">STS</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://logowik.com/content/uploads/images/maven-apache3537.jpg" alt="jquery_logo">
+                        <p class="skills-card-name">Maven</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="./images/XAAMP.png" alt="jquery_logo">
+                        <p class="skills-card-name">XAAMP</p>
+                    </div>
+                </div>  
             </div>
-          </div> 
-    </section>
+            <div class="soft-skills">
+                <h2>Soft Skills</h2>
+                <div class="skill-cards">
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://static.vecteezy.com/system/resources/thumbnails/000/577/853/small/6-01.jpg" alt="jquery_logo">
+                        <p class="skills-card-name">Leadership</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://cdn1.vectorstock.com/i/1000x1000/11/45/adaptability-icon-simple-element-from-life-skills-vector-34251145.jpg" alt="css_logo">
+                        <p class="skills-card-name">Adaptability</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://spopsprod.blob.core.windows.net/cp-cms/446099c6f88617c44da1/default" alt="js_logo">
+                        <p class="skills-card-name">Team Work</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR4EUiv30BezlO637MN7iA2oekhWA1F0HCvA&usqp=CAU" alt="jquery_logo">
+                        <p class="skills-card-name">Communication</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://static.vecteezy.com/system/resources/thumbnails/009/242/229/small_2x/problem-solving-outline-icon-free-vector.jpg" alt="jquery_logo">
+                        <p class="skills-card-name">Problem Solving</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://icon-library.com/images/learn-icon-png/learn-icon-png-26.jpg" alt="jquery_logo">
+                        <p class="skills-card-name">Self Learning</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://static.vecteezy.com/system/resources/previews/010/948/779/original/time-management-logo-template-check-mark-with-clock-icon-design-free-vector.jpg" alt="jquery_logo">
+                        <p class="skills-card-name">Time Management</p>
+                    </div>
+                    <div class="skills-card">
+                        <img class="skills-card-img" src="https://c8.alamy.com/comp/RHPN14/patience-icon-thin-outline-creativepatience-design-from-soft-skills-collection-web-design-apps-software-and-print-usage-RHPN14.jpg" alt="jquery_logo">
+                        <p class="skills-card-name">Perseverance</p>
+                    </div>
+                </div>  
+            </div>
+        </section>
 
-    <!-- Github Stats Section -->
-    <section id="statistics">
-        <h1 class="headings">Statistics</h1>
-        <div class="react-activity-calendar">
-            <img src="https://github-readme-streak-stats.herokuapp.com?user=nmohammednawaz&theme=gotham" alt="" id="github-streak-stats">
-            <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nmohammednawaz&theme=gotham&layout=compact" alt="">
-            <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=nmohammednawaz&count_private=true&theme=gotham" alt="">
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h1 class="headings">Projects</h1>
+            <div class="slider-container">
+                <div class="slider">
+                <!-- Project cards -->
+                    <div class="project-card">
+                        <div>
+                            <h2>Teck Stacks Used</h2>
+                            <div class="project-tech-stack">
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://icon-library.com/images/html5-icon/html5-icon-13.jpg" alt="html_logo">
+                                    <p class="skills-card-name">HTML</p>
+                                </div>
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" alt="css_logo">
+                                    <p class="skills-card-name">CSS</p>
+                                </div>
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="js_logo">
+                                    <p class="skills-card-name">JavaScript</p>
+                                </div>
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg" alt="html_logo">
+                                    <p class="skills-card-name">Java</p>
+                                </div>
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://plugins.jetbrains.com/files/18622/305008/icon/pluginIcon.png" alt="html_logo">
+                                    <p class="skills-card-name">Spring Boot</p>
+                                </div>
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://avatars.githubusercontent.com/u/45949248?s=200&v=4" alt="html_logo">
+                                    <p class="skills-card-name">Lombok</p>
+                                </div>
+                                <div class="skills-card">
+                                    <img class="skills-card-img" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" alt="html_logo">
+                                    <p class="skills-card-name">Sql</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/projects/Book_My_Bus_Logo.png" alt="" class="project-logo">
+                            <h1 class="project-title">Book My Bus</h1>
+                            <p class="project-description">An intuitive online platform for bus reservations, providing users easy
+                                booking while enabling admins to manage routes, buses, and users.</p>
+                        </div>
+                        <div>
+                            <div class="project-links">
+                                <a href="https://github.com/nmohammednawaz/Book-My-Bus" class="project-github-link" target="_blank">Explore Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://book-my-bus.netlify.app/" class="project-deployed-link" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="project-demo-link" target="_blank">Watch Demo <i class="fa-solid fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots-container">
+                <!-- Dots will be added dynamically here -->
+                </div>
+            </div> 
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h1 class="headings">Contact</h1>
-        <div class="contacts">
-            <div class="Contact-details">
-                <h2>Get In Touch</h2>
-                <p>If my work and skills attracts you, feel free to connect with me. I would love to talk and work with you.</p>
-                <div class="contact-type">
-                    <a href="https://www.google.com/maps/place/Bangalore,+Karnataka" id="contact-location" target="_blank">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>&nbsp;Bangalore, Karnataka</p>
-                    </a>                    
+        <!-- Github Stats Section -->
+        <section id="statistics">
+            <h1 class="headings">Statistics</h1>
+            <div class="react-activity-calendar">
+                <img src="https://github-readme-streak-stats.herokuapp.com?user=nmohammednawaz&theme=gotham" alt="" id="github-streak-stats">
+                <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nmohammednawaz&theme=gotham&layout=compact" alt="">
+                <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=nmohammednawaz&count_private=true&theme=gotham" alt="">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h1 class="headings">Contact</h1>
+            <div class="contacts">
+                <div class="Contact-details">
+                    <h2>Get In Touch</h2>
+                    <p>If my work and skills attracts you, feel free to connect with me. I would love to talk and work with you.</p>
+                    <div class="contact-type">
+                        <a href="https://www.google.com/maps/place/Bangalore,+Karnataka" id="contact-location" target="_blank">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>&nbsp;Bangalore, Karnataka</p>
+                        </a>                    
+                    </div>
+                    <div class="contact-type">
+                        <a href="mailto:nmohammednawaz786@gmail.com" id="contact-email" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                            <p>nmohammednawaz786@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="contact-type">
+                        <a href="tel:9036146615" id="contact-phone" target="_blank">
+                            <i class="fas fa-phone"></i>
+                            <p>9036146615</p>
+                        </a>
+                    </div>
+                    <div class="contact-type">
+                        <a href="https://www.linkedin.com/in/n-mohammed-nawaz-1420b3238/" id="contact-linkedin" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <p>n-mohammed-nawaz</p>
+                        </a>
+                    </div>
+                    <div class="contact-type">
+                        <a href="https://github.com/nmohammednawaz" id="contact-github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <p>nmohammednawaz</p>
+                        </a>
+                        
+                    </div>
                 </div>
-                <div class="contact-type">
-                    <a href="mailto:nmohammednawaz786@gmail.com" id="contact-email" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                        <p>nmohammednawaz786@gmail.com</p>
-                    </a>
-                </div>
-                <div class="contact-type">
-                    <a href="tel:9036146615" id="contact-phone" target="_blank">
-                        <i class="fas fa-phone"></i>
-                        <p>9036146615</p>
-                    </a>
-                </div>
-                <div class="contact-type">
-                    <a href="https://www.linkedin.com/in/n-mohammed-nawaz-1420b3238/" id="contact-linkedin" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        <p>n-mohammed-nawaz</p>
-                    </a>
-                </div>
-                <div class="contact-type">
-                    <a href="https://github.com/nmohammednawaz" id="contact-github" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <p>nmohammednawaz</p>
-                    </a>
-                    
+                <div class="contact-form">
+                    <h2>Message Me</h2>
+                    <form action="mailto:" id="contact-form">
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email Id" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Please Type Your Message Here..." required></textarea>
+                        <input type="submit" value="Send Message">
+                    </form>
                 </div>
             </div>
-            <div class="contact-form">
-                <h2>Message Me</h2>
-                <form action="mailto:" id="contact-form">
-                    <input type="text" name="name" id="name" placeholder="Name" required>
-                    <input type="email" name="email" id="email" placeholder="Email Id" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Please Type Your Message Here..." required></textarea>
-                    <input type="submit" value="Send Message">
-                </form>
-            </div>
-        </div>
-        
-        
-        
-    </section>
+            
+            
+            
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <h3>Created By <span class="footer-name">Nawaz</span> | &copy; 2023 All Rights Reserved</h3>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer">
+            <h3>Created By <span class="footer-name">Nawaz</span> | &copy; 2023 All Rights Reserved</h3>
+        </footer>
 
 
-    <!-- Links for external javascript -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="./scripts/index.js"></script>
-</body>
-</html>
+        <!-- Links for external javascript -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script src="./scripts/index.js"></script>
+    </body>
+    </html>
