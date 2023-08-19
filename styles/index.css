@@ -6,6 +6,24 @@
     color: white;
     scroll-behavior: smooth;
 }
+
+/* Css for Scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #1e9040;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #0B7841; 
+  }
+  
 /* ------------------------------------------------------------ CSS for Navbar ------------------------------------------------------------ */
 #nav-menu {
     display: flex;
@@ -378,28 +396,34 @@ section{
     display: flex;
     justify-content: space-around;
 }
+.contacts h2{
+    font-size: 22px;
+}
 .contacts > div{
     width: 40%;
 }
-.Contact-details{
-    display: block;
+.Contact-details > h2{
+    font-size: 20px;
 }
 .contact-type > a{
     display: flex;
     text-decoration: none;
-    margin: 50px 30px;
+    margin: 30px 0px;
     align-items: center;
 }
+.contact-type > a > p:hover{
+    color: #1e9040;
+}
 .contact-type > a > i{
-    font-size: 56px;
+    font-size: 48px;
     color: #1e9040;
     margin-right: 40px;
 }
 .contact-type > a > p{
-    font-size: 22px;
+    font-size: 20px;
 }
 .contact-form{
-    width: 40%;
+    width: 50%;
 }
 .contact-form > h2{
     font-size: 22px;
@@ -418,8 +442,8 @@ section{
     padding: 10px 15px;
     border-top: 0.5px solid rgb(56, 56, 56);
     border-left: 0.5px solid rgb(56, 56, 56);
-    border-right: 2px solid gray;
-    border-bottom: 2px solid gray;
+    border-right: 2px solid #1e9040;
+    border-bottom: 2px solid #1e9040;
     outline: none;
 }
 #contact-form > textarea{
@@ -437,24 +461,4 @@ section{
     background-color: #0B7841;
 }
 
-
-
-
-
-/* Css for Scroll bar */
-::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: black;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #1e9040;
-    border-radius: 2px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #0B7841; 
-  }
-  
+/* ------------------------------------------------------------ CSS for Footer ------------------------------------------------------------ */
