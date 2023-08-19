@@ -2,6 +2,8 @@ const resumeLinkOne = document.getElementById("resume-button-1");
 const resumeLinkTwo = document.getElementById("resume-button-2");
 const navbar = document.getElementById('nav-menu');
 let scrollUpButton = document.getElementById("scroll-up");
+let hamburger = document.getElementById("hamburger");
+let navbarMenu = document.getElementById("navbar-menu");
     
 // Function to toggle the sticky class on the navbar
 function toggleStickyNavbar() {
@@ -29,7 +31,7 @@ window.addEventListener("scroll", function() {
     var homeSection = document.getElementById("home");
     var scrolled = window.scrollY;
 
-    if (scrolled < 500 && homeSection.getBoundingClientRect().bottom < window.innerHeight) {
+    if (scrolled < 700 && homeSection.getBoundingClientRect().bottom < window.innerHeight) {
       // Hide the scroll-up button when the user is on the home section or when the bottom of the home section is visible in the viewport
       scrollUpButton.style.display = "none";
     } else {
@@ -48,5 +50,10 @@ scrollUpButton.addEventListener("click", function() {
     });
 });
 
+// Toggle Hamburger
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbarMenu.classList.toggle('open');
+});
 
 
