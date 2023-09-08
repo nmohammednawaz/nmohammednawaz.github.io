@@ -7,6 +7,7 @@ let navbarMenu = document.getElementById("navbar-menu");
 let frontEndSkillCardContainer = document.getElementById("front-end-skill-cards");
 let backEndSkillCardContainer = document.getElementById("back-end-skill-cards");
 let builtToolsContainer = document.getElementById("built-tools");
+let softSkillsContainer = document.getElementById("soft-skills");
     
 // Function to toggle the sticky class on the navbar
 function toggleStickyNavbar() {
@@ -150,6 +151,7 @@ backEndStacks.forEach((backEndStack) => {
     backEndSkillCardContainer.append(createSkillCard(backEndStack));
 })
 
+// Built tools details array
 const builtTools = [
     {
         imageLink: "./images/githubLogo.png",
@@ -157,33 +159,90 @@ const builtTools = [
         name: "Github"
     },
     {
-        imageLink: "https://www.bridgetech.co.id/storage/2021/02/spring-logo.png",
-        altName: "Spring_Logo",
-        name: "Spring"
+        imageLink: "https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png",
+        altName: "Netlify_Logo",
+        name: "Netlify"
     },
     {
-        imageLink: "https://plugins.jetbrains.com/files/18622/305008/icon/pluginIcon.png",
-        altName: "SpringBoot_Logo",
-        name: "Spring Boot"
+        imageLink: "https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png",
+        altName: "Postman_Logo",
+        name: "Postman"
     },
     {
-        imageLink: "https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png",
-        altName: "SpringSecurity_Logo",
-        name: "Spring Security"
+        imageLink: "https://dashboard.snapcraft.io/site_media/appmedia/2016/12/mysql.png",
+        altName: "MysqlClient_Logo",
+        name: "MySql Client"
     },
     {
-        imageLink: "https://toppng.com/uploads/preview/hibernate-logo-11609364227r2rk6gphuk.png",
-        altName: "Hibernate_Logo",
-        name: "Hibernate"
+        imageLink: "https://w7.pngwing.com/pngs/905/947/png-transparent-microsoft-visual-studio-code-alt-macos-bigsur-icon-thumbnail.png",
+        altName: "VSCode_Logo",
+        name: "Visual Studio"
     },
     {
-        imageLink: "https://avatars.githubusercontent.com/u/45949248?s=200&v=4",
-        altName: "Lombok_Logo",
-        name: "Project Lombok"
+        imageLink: "https://blog.kakaocdn.net/dn/cTqexF/btq1Qod0a5p/q5LIAZUoVvWyAgQyKpcank/img.png",
+        altName: "STS_Logo",
+        name: "STS"
     },
     {
-        imageLink: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png",
-        altName: "SQL_Logo",
-        name: "SQL"
+        imageLink: "https://logowik.com/content/uploads/images/maven-apache3537.jpg",
+        altName: "Maven_Logo",
+        name: "Maven"
+    },
+    {
+        imageLink: "./images/XAAMP.png",
+        altName: "XAAMP_Logo",
+        name: "XAAMP"
     }
 ];
+
+builtTools.forEach((builtTool) => {
+    builtToolsContainer.append(createSkillCard(builtTool));
+})
+
+// Soft skills details Array
+const softSkills = [
+    {
+        imageLink: "https://static.vecteezy.com/system/resources/thumbnails/000/577/853/small/6-01.jpg",
+        altName: "Leadership_Logo",
+        name: "Leadership"
+    },
+    {
+        imageLink: "https://cdn1.vectorstock.com/i/1000x1000/11/45/adaptability-icon-simple-element-from-life-skills-vector-34251145.jpg",
+        altName: "Adaptability_Logo",
+        name: "Adaptability"
+    },
+    {
+        imageLink: "https://spopsprod.blob.core.windows.net/cp-cms/446099c6f88617c44da1/default",
+        altName: "teamWork_Logo",
+        name: "Team Work"
+    },
+    {
+        imageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR4EUiv30BezlO637MN7iA2oekhWA1F0HCvA&usqp=CAU",
+        altName: "communication_Logo",
+        name: "Communication"
+    },
+    {
+        imageLink: "https://static.vecteezy.com/system/resources/thumbnails/009/242/229/small_2x/problem-solving-outline-icon-free-vector.jpg",
+        altName: "problemSolving_Logo",
+        name: "Problem Solving"
+    },
+    {
+        imageLink: "https://icon-library.com/images/learn-icon-png/learn-icon-png-26.jpg",
+        altName: "Self_learning",
+        name: "Self Learning"
+    },
+    {
+        imageLink: "https://static.vecteezy.com/system/resources/previews/010/948/779/original/time-management-logo-template-check-mark-with-clock-icon-design-free-vector.jpg",
+        altName: "TeamMngmnt_Logo",
+        name: "Team Management"
+    },
+    {
+        imageLink: "https://c8.alamy.com/comp/RHPN14/patience-icon-thin-outline-creativepatience-design-from-soft-skills-collection-web-design-apps-software-and-print-usage-RHPN14.jpg",
+        altName: "Perseverance_Logo",
+        name: "Perseverance"
+    }
+];
+
+softSkills.forEach((softSkill) => {
+    softSkillsContainer.append(createSkillCard(softSkill));
+})
