@@ -112,7 +112,7 @@
 section{
     margin: 10vh auto;
     padding: 20px;
-    width: 85%;
+    width: 90%;
 }
 #home{
     display: flex;
@@ -559,9 +559,10 @@ section{
 }
 
 @media only screen and (max-width: 967px){
+   
     #home{
         flex-direction: column-reverse;
-        width: 85%;
+        width: 100%;
         margin: 20vh auto;
     }
     .home-image, .home-text{
@@ -571,6 +572,9 @@ section{
     .home-image img{
         display: block;
         margin: auto;
+    }
+    .home-text{
+        font-size: 20px;
     }
 }
 
