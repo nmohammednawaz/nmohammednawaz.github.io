@@ -498,7 +498,6 @@ section{
 
 /* ------------------------------------------------------------ CSS for Small Screens ---------------------------------------------------------- */
 
-/* Desktops, large screens: 1025px - 1200px */
 @media only screen and (max-width: 1130px){
     section{
         width: 90%;
@@ -559,6 +558,21 @@ section{
     }
 }
 
+@media only screen and (max-width: 967px){
+    #home{
+        flex-direction: column-reverse;
+        width: 85%;
+        margin: 20vh auto;
+    }
+    .home-image, .home-text{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .home-image img{
+        display: block;
+        margin: auto;
+    }
+}
 
 /* -------------------------------------------- */
 
