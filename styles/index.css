@@ -111,15 +111,13 @@
 /* ------------------------------------------------------------ CSS for Home ------------------------------------------------------------ */
 section{
     margin: 10vh auto;
-    padding: 20px;
-    width: 90%;
+    width: 80%;
 }
 #home{
     display: flex;
     width: 70%;
     justify-content: space-between;
     margin: 30vh auto;
-    padding: 10px 40px;
 }
 .home-text{
     font-size: 24px;
@@ -392,16 +390,6 @@ section{
 .project-links > a:hover{
     background-color: #303531;
 }
-@media (max-width: 767px) {
-    .project-card{
-        flex-direction: column;
-        width: 90%;
-    }
-  
-    .project-card > div:nth-child(2) {
-      order: -1;
-    }
-  }
 
   /* ------------------------------------------------------------ CSS for Statistics ----------------------------------------------------------- */
 .react-activity-calendar > img{
@@ -558,11 +546,13 @@ section{
     }
 }
 
-@media only screen and (max-width: 967px){
-   
+@media only screen and (max-width: 867px){
+    .scroll-up-button > i{
+        right: 10px;
+    }
     #home{
         flex-direction: column-reverse;
-        width: 100%;
+        width: 85%;
         margin: 20vh auto;
     }
     .home-image, .home-text{
@@ -575,6 +565,63 @@ section{
     }
     .home-text{
         font-size: 20px;
+    }
+    .headings{
+        width: 50%;
+        text-align: center;
+        margin: 2vh auto 5vh auto;
+    }
+    #user-detail-name{
+        display: none;
+    }
+    #user-detail-intro{
+        width: 85%;
+    }
+    .about-skill{
+        height: 90px;
+        width: 60px;
+    }
+    #skills{
+        display: none;
+    }
+    .project-card{
+        flex-direction: column;
+        width: 90%;
+    }
+    .project-card > div:nth-child(2) {
+      order: -1;
+    }
+    .project-card > div{
+        width: 90%;
+        display: block;
+        margin: auto;
+        row-gap: 5px;
+    }
+    .project-logo{
+        width: 90%;
+    }
+    .project-card > div:nth-child(1) {
+        display: none;
+    }
+    .project-links{
+        padding-top: 0vh;
+    }
+    .project-links > a{
+        margin: 10px auto;
+    }
+    .contacts{
+        flex-direction: column-reverse;
+    }
+    .contacts > div{
+        width: 85%;
+        display: block;
+        margin: 5vh auto 0 auto;
+    }
+    .contact-form{
+        margin-bottom: 30px;
+    }
+    .footer > h3{
+        font-size: 16px;
     }
 }
 
