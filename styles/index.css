@@ -253,7 +253,6 @@ section{
     margin: 0 auto 5vh;
 }
 .teck-stacks{
-    /* display: flex; */
     justify-content: space-around;
 }
 .front-end{
@@ -446,7 +445,7 @@ section{
     border-radius: 10px;
     color: white;
     height: 20px;
-    width: 90%;
+    width: 100%;
     margin: 20px 0px;
     padding: 10px 15px;
     border-top: 0.5px solid rgb(56, 56, 56);
@@ -578,8 +577,31 @@ section{
         height: 90px;
         width: 60px;
     }
-    #skills{
-        display: none;
+    .skill-set > h2{
+        font-size: 22px;
+    }
+    .front-end > h3, .back-end > h3{
+        font-size: 18px;
+    }
+    .front-end, .back-end{
+        width: 90%;
+    }
+    .skill-cards{
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 20px;
+        justify-content: center;
+    }
+    .skills-card{
+        width: 55px;
+        height: 70px;
+    }
+    .skills-card-img{
+        width: 35px;
+        height: 35px;
+    }
+    .other-skills > h2, .soft-skills > h2{
+        font-size: 22px;
     }
     .project-card{
         flex-direction: column;
@@ -623,11 +645,25 @@ section{
 }
 
 @media only screen and (max-width: 480px){
+    .nav-logo > a > img {
+        max-width: 120px;
+    }
+    .navbar-menu{
+        margin-top: 70px;
+    }
     .home-text{
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .headings{
+        width: 80%;
+        text-align: center;
+        margin: 2vh auto 5vh auto;
     }
     .project-logo{
         height: 120px;
+    }
+    .react-activity-calendar > img{
+        width: 80%;
     }
     .contact-type > a > p{
         font-size: 16px;
