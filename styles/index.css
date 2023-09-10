@@ -490,9 +490,6 @@ section{
     section{
         width: 90%;
     }
-    .scroll-up-button > i{
-        right: 30px;
-    }
     .hamburger{
         display: block;
     }
@@ -622,6 +619,24 @@ section{
     }
     .footer > h3{
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .home-text{
+        font-size: 18px;
+    }
+    .project-logo{
+        height: 120px;
+    }
+    .contact-type > a > p{
+        font-size: 16px;
+    }
+    .contact-type > a > i{
+        font-size: 32px;
+    }
+    .footer > h3{
+        font-size: 14px;
     }
 }
 
