@@ -664,7 +664,7 @@ section{
         margin: 2vh auto 5vh auto;
     }
     #connect-button{
-        /* width: 60%; */
+        flex-wrap: nowrap;
     }
     .project-logo{
         height: 120px;
