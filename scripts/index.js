@@ -264,3 +264,113 @@ const softSkills = [
 softSkills.forEach((softSkill) => {
     softSkillsContainer.append(createSkillCard(softSkill));
 })
+
+
+let projects = [
+    {
+        projectTitle: "Book My Bus",
+        projectDescription: "An intuitive online platform for bus reservations, providing users easy booking while enabling admins to manage routes, buses, and users.",
+        projectImageSrc: "./images/projects/Book_My_Bus_Logo.png",
+        projectImageSrcAlt: "Book-my-bus-Logo",
+        projectGithubLink: "https://github.com/nmohammednawaz/Book-My-Bus",
+        projectDeployedLink: "https://book-my-bus.netlify.app/",
+        projectDemoLink: "#",
+        projectTeckStacks: [
+            {
+                imageLink: "https://icon-library.com/images/html5-icon/html5-icon-13.jpg",
+                altName: "HTML_Logo",
+                name: "HTML"
+            },
+            {
+                imageLink: "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
+                altName: "CSS_Logo",
+                name: "CSS"
+            },
+            {
+                imageLink: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                altName: "JavaScript_Logo",
+                name: "JavaScript"
+            },
+            {
+                imageLink: "https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg",
+                altName: "Java_Logo",
+                name: "Java"
+            },
+            {
+                imageLink: "https://www.bridgetech.co.id/storage/2021/02/spring-logo.png",
+                altName: "Spring_Logo",
+                name: "Spring"
+            },
+            {
+                imageLink: "https://plugins.jetbrains.com/files/18622/305008/icon/pluginIcon.png",
+                altName: "SpringBoot_Logo",
+                name: "Spring Boot"
+            },
+            {
+                imageLink: "https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png",
+                altName: "SpringSecurity_Logo",
+                name: "Spring Security"
+            },
+            {
+                imageLink: "https://avatars.githubusercontent.com/u/45949248?s=200&v=4",
+                altName: "Lombok_Logo",
+                name: "Project Lombok"
+            },
+            {
+                imageLink: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png",
+                altName: "SQL_Logo",
+                name: "SQL"
+            }
+        ]
+    }
+];
+
+function createProjectCard(projectDetails){
+    let projectCard = document.createElement("div");
+    projectCard.classList.add("project-card");
+
+    projectCard.innerHTML = `
+    <div>
+        <h2>Teck Stacks Used</h2>
+        <div class="project-tech-stack">
+            
+        </div>
+    </div>
+    <div>
+        <img src="${projectDetails.projectImageSrc}" alt="${projectDetails.projectImageSrcAlt}" class="project-logo">
+        <h1 class="project-title">${projectDetails.projectTitle}</h1>
+        <p class="project-description">${projectDetails.projectDescription}</p>
+    </div>
+    <div>
+        <div class="project-links">
+            <a href="${projectDetails.projectGithubLink}" class="project-github-link" target="_blank">Explore Code <i class="fa-brands fa-github"></i></a>
+            <a href="${projectDetails.projectDeployedLink}" class="project-deployed-link" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="${projectDetails.projectDemoLink}" class="project-demo-link" target="_blank">Watch Demo <i class="fa-solid fa-eye"></i></a>
+        </div>
+    </div>
+    `;
+
+    let projectTechStacksDiv = projectCard.querySelector(".project-tech-stack");
+    projectDetails.projectTeckStacks.forEach(projectStack => {
+        projectTechStacksDiv.appendChild(createSkillCard(projectStack));
+    });
+
+    return projectCard;
+}
+
+function createProjectSlider(project){
+    let projectSlider = document.createElement("div");
+    projectSlider.classList.add("project-slider");
+
+    projectSlider.append(createProjectCard(project));
+
+    return projectSlider;
+    
+}
+
+let projectSliderContainer = document.getElementById("project-slider-container");
+
+projects.forEach(project => {
+    projectSliderContainer.append(createProjectSlider(project));
+})
+
