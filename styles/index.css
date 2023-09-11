@@ -445,7 +445,7 @@ section{
     border-radius: 10px;
     color: white;
     height: 20px;
-    width: 100%;
+    width: 90%;
     margin: 20px 0px;
     padding: 10px 15px;
     border-top: 0.5px solid rgb(56, 56, 56);
@@ -656,8 +656,15 @@ section{
     }
     .headings{
         width: 80%;
+        font-size: 36px;
         text-align: center;
         margin: 2vh auto 5vh auto;
+    }
+    #connect-button{
+        width: 50%;
+    }
+    #resume-button-2{
+        width: 30%;
     }
     .project-logo{
         height: 120px;
