@@ -77,6 +77,9 @@
     font-size: 18px;
     text-decoration: none;
 }
+.resume > i{
+    background-color: transparent;
+}
 .resume:hover{
     background-color: #0B7841;
 }
@@ -243,7 +246,7 @@ section{
 }
 #resume-button-2{
     display: block;
-    width: 80px;
+    width: 100px;
 }
 
 /* ------------------------------------------------------------ CSS for Skills ------------------------------------------------------------ */
@@ -664,7 +667,7 @@ section{
         width: 50%;
     }
     #resume-button-2{
-        width: 30%;
+        /* width: ; */
     }
     .project-logo{
         height: 120px;
