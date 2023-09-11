@@ -654,6 +654,9 @@ section{
     .navbar-menu{
         margin-top: 70px;
     }
+    #home{
+        margin: 15vh auto;
+    }
     .home-text{
         font-size: 16px;
     }
