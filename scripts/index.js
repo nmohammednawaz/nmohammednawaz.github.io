@@ -22,22 +22,24 @@ function toggleStickyNavbar() {
     }
 }
   
-// Listen for scroll events and apply the sticky class accordingly
+// Listen for scroll event and apply the sticky class accordingly
 window.addEventListener('scroll', toggleStickyNavbar);
   
 // Js for Auto typed text   
 var typed = new Typed('#auto-typing-text', {
-    strings: ["Full Stack Web Developer", "Java Backend Developer"],
+    strings: ["Full Stack Web Developer", "Java Backend Developer", "Full Stack Java Developer", "Spring Boot Developer"],
     typeSpeed: 100,
     backSpeed: 50,
     loop: true
 });
 
 
-// //   Scroll up button visibility
+// Scroll up button visibility
+
 // Flag to track if the user has scrolled down
 var hasScrolled = false;
 scrollUpButton.style.display = "none";
+
 // Function to toggle the visibility of the scroll-up button
 function toggleScrollUpButtonVisibility() {
     var homeSection = document.getElementById("home");
@@ -479,7 +481,7 @@ let projects = [
     },
 ];
 
-// Creates Project cards
+// Function to create Project cards
 function createProjectCard(projectDetails){
     let projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
@@ -527,10 +529,12 @@ const dotsContainer = document.querySelector('.dots-container');
 
 let currentIndex = 0;
 
+// Function to update slider
 function updateSlider() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
+// Function to move to previous slide
 function prevSlide() {
     clearInterval(slideInterval);
     if (currentIndex > 0) {
@@ -540,6 +544,7 @@ function prevSlide() {
     }
 }
 
+// Function to move to next slide
 function nextSlide() {
     clearInterval(slideInterval);
     if (currentIndex < slides.length - 1) {
@@ -549,6 +554,7 @@ function nextSlide() {
     }
 }
 
+// Function to update dots
 function updateDots() {
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
@@ -560,6 +566,7 @@ function updateDots() {
     });
 }
 
+// Function to create dots
 slides.forEach((_, index) => {
     const dot = document.createElement('div');
     dot.classList.add('dot');
@@ -595,7 +602,7 @@ startAutoSlide();
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 
-
+// Function to toggle dots slider
 dotsContainer.addEventListener('click', (event) => {
     const dotIndex = Array.from(dotsContainer.children).indexOf(event.target);
     if (dotIndex !== -1) {
@@ -606,6 +613,7 @@ dotsContainer.addEventListener('click', (event) => {
     }
 });
 
+// Function to send message(email)
 function sendEmail(){
     emailjs.init("GhshwA9L7DSVyL0ll");
 
@@ -622,15 +630,15 @@ function sendEmail(){
     emailjs.send(serviceID, templateID, params)
     .then(response => {
         setTimeout(function () {
-            // Show the success popup
+            // Shows the success popup
             successPopup.style.display = 'flex';
 
-            // Hide the success popup after 3 seconds
+            // Hides the success popup after 3 seconds
             setTimeout(function () {
                 successPopup.style.display = 'none';
             }, 3000);
 
-            // Clear the form fields (optional)
+            // Clears the form fields
             contactForm.reset();
         }, 1000);
     })
