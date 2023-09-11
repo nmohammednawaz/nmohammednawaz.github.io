@@ -313,7 +313,6 @@ section{
 /* ------------------------------------------------------------ CSS for Project ------------------------------------------------------------ */ 
 .project-slider-container{
     overflow: hidden;
-    border-radius: 20px;
 }
 .project-slider {
     display: flex;
@@ -326,18 +325,14 @@ section{
     justify-content: space-around;
     text-align: center;
     margin: 5vh auto;
-    padding: 30px 0px;
+    padding: 20px 0px;
     border-radius: 20px;
     background: radial-gradient(circle, #1e9040, #303531); /* Radial gradient */
     transition: box-shadow 0.3s;
     flex: 0 0 100%;
     overflow: hidden;
-  }
-  
-  .project-card:hover {
     box-shadow: 0px 10px 20px 0px rgba(30, 144, 64, 0.4);
-  }
-  
+}
 .project-card > div{
     width: 33%;
     border-radius: 10px;
@@ -348,8 +343,9 @@ section{
     margin: 5vh auto;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 10px;
-    justify-content: space-around;
+    row-gap: 20px;
+    column-gap: 20px;
+    justify-content: center;
     background: transparent;
 }
 .project-card > div > h2{
@@ -373,7 +369,7 @@ section{
     width: 90%;
     font-size: 16px;
     text-align: justify;
-    margin: 3vh auto;
+    margin: 3vh auto 0 auto;
     background: transparent;
 }
 .project-links{
@@ -402,7 +398,6 @@ section{
 }
 .dots-container {
     text-align: center;
-    margin-top: 10px;
 }
 .dot {
     display: inline-block;
@@ -414,24 +409,20 @@ section{
     cursor: pointer;
 }
 .controls{
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: space-around;
-    margin: 5px auto;
+    margin: auto;
     font-size: 26px;
+    align-content: center   ;
 }
 .prev-button, .next-button{
-    padding: 10px;
-    font-size: 26px;
-    border-radius: 30px;
+    font-size: 36px;
     cursor: pointer;
     border: none;
-    height: 60px;
-    width: 60px;
-    border: 3px solid #1e9040;
 }
-.prev-button:hover, .next-button:hover{
-    box-shadow: 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040, 0px 2px 10px #1e9040;
+.prev-button > i:hover, .next-button > i:hover{
+    color: #0B7841;
 }
 .controls i{
     background-color: transparent;
@@ -675,7 +666,7 @@ section{
         padding-top: 0vh;
     }
     .project-links > a{
-        margin: 10px auto;
+        margin: 16px auto;
     }
     .contacts{
         flex-direction: column-reverse;
@@ -724,6 +715,9 @@ section{
     .project-logo{
         height: 120px;
     }
+    .controls{
+        width: 60%;
+    }
     .react-activity-calendar > img{
         width: 80%;
     }
@@ -734,7 +728,7 @@ section{
         font-size: 28px;
     }
     .footer > h3{
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 

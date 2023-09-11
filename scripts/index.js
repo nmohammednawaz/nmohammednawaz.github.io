@@ -8,6 +8,8 @@ let frontEndSkillCardContainer = document.getElementById("front-end-skill-cards"
 let backEndSkillCardContainer = document.getElementById("back-end-skill-cards");
 let builtToolsContainer = document.getElementById("built-tools");
 let softSkillsContainer = document.getElementById("soft-skills");
+let contactForm = document.getElementById("contact-form");
+let slideInterval;
 
     
 // Function to toggle the sticky class on the navbar
@@ -114,6 +116,11 @@ const frontEndStacks = [
         imageLink: "https://cdn.icon-icons.com/icons2/2699/PNG/512/jquery_logo_icon_167804.png",
         altName: "jQuery_Logo",
         name: "jQuery"
+    },
+    {
+        imageLink: "https://i0.wp.com/dbaontap.com/wp-content/uploads/2015/11/json-logo.png?fit=690%2C330&ssl=1",
+        altName: "JSON_Logo",
+        name: "JSON Server"
     },
     {
         imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
@@ -266,7 +273,7 @@ softSkills.forEach((softSkill) => {
     softSkillsContainer.append(createSkillCard(softSkill));
 })
 
-
+// Projects Array
 let projects = [
     {
         projectTitle: "Book My Bus",
@@ -352,11 +359,11 @@ let projects = [
     },
     {
         projectTitle: "Fabrica",
-        projectDescription: "An intuitive online platform for bus reservations, providing users easy booking while enabling admins to manage routes, buses, and users.",
+        projectDescription: "Fabrica is a clone of webiste called Columbia.com which is an apparel and footwear company. It designs, develops, markets, and distributes apparel, footwear, accessories and equipment for men, kids, women and youth.",
         projectImageSrc: "./images/projects/Fabrica_Logo.png",
         projectImageSrcAlt: "Fabrica-Logo",
         projectGithubLink: "https://github.com/nmohammednawaz/Fabrica",
-        projectDeployedLink: "https://book-my-bus.netlify.app/",
+        projectDeployedLink: "https://fabricaa.netlify.app/",
         projectDemoLink: "#",
         projectTeckStacks: [
             {
@@ -375,39 +382,103 @@ let projects = [
                 name: "JavaScript"
             },
             {
+                imageLink: "https://i0.wp.com/dbaontap.com/wp-content/uploads/2015/11/json-logo.png?fit=690%2C330&ssl=1",
+                altName: "JSON_Logo",
+                name: "JSON Server"
+            },
+            {
+                imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+                altName: "RestApi_Logo",
+                name: "REST API"
+            }
+        ]
+    },
+    {
+        projectTitle: "Violet Beaute",
+        projectDescription: "Violet Beaute is an e-commerce product-based web application, A website clone of purplle.com website",
+        projectImageSrc: "./images/projects/VioletBeaute_Logo.png",
+        projectImageSrcAlt: "Violetbeaute-Logo",
+        projectGithubLink: "https://github.com/nmohammednawaz/Violet-Beaute",
+        projectDeployedLink: "https://violetbeaute.netlify.app/",
+        projectDemoLink: "#",
+        projectTeckStacks: [
+            {
+                imageLink: "https://icon-library.com/images/html5-icon/html5-icon-13.jpg",
+                altName: "HTML_Logo",
+                name: "HTML"
+            },
+            {
+                imageLink: "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
+                altName: "CSS_Logo",
+                name: "CSS"
+            },
+            {
+                imageLink: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                altName: "JavaScript_Logo",
+                name: "JavaScript"
+            },
+            {
+                imageLink: "https://i0.wp.com/dbaontap.com/wp-content/uploads/2015/11/json-logo.png?fit=690%2C330&ssl=1",
+                altName: "JSON_Logo",
+                name: "JSON Server"
+            },
+            {
+                imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+                altName: "RestApi_Logo",
+                name: "REST API"
+            }
+        ]
+    },
+    {
+        projectTitle: "Jeevan Shailee",
+        projectDescription: "Jeevan Shailee is an e-commerce product-based web application, It is an e-commerce website clone of lifestylestores.com",
+        projectImageSrc: "./images/projects/JeevanShailee_Logo.png",
+        projectImageSrcAlt: "JeevanShailee-Logo",
+        projectGithubLink: "https://github.com/nmohammednawaz/JeevanShailee",
+        projectDeployedLink: "https://jeevanshailee.netlify.app/",
+        projectDemoLink: "#",
+        projectTeckStacks: [
+            {
+                imageLink: "https://icon-library.com/images/html5-icon/html5-icon-13.jpg",
+                altName: "HTML_Logo",
+                name: "HTML"
+            },
+            {
+                imageLink: "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
+                altName: "CSS_Logo",
+                name: "CSS"
+            },
+            {
+                imageLink: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                altName: "JavaScript_Logo",
+                name: "JavaScript"
+            },
+            {
+                imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+                altName: "RestApi_Logo",
+                name: "REST API"
+            }
+        ]
+    },
+    {
+        projectTitle: "Block Your Stocks",
+        projectDescription: "Block Your Stocks is a console-based project designed as an Stock Broker System that allows users to buy and sell stocks.",
+        projectImageSrc: "./images/projects/BlockYourStocks_Logo.png",
+        projectImageSrcAlt: "Block-your-stocks-Logo",
+        projectGithubLink: "https://github.com/nmohammednawaz/Block-Your-Stocks",
+        projectDeployedLink: "#",
+        projectDemoLink: "#",
+        projectTeckStacks: [
+            {
                 imageLink: "https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg",
                 altName: "Java_Logo",
                 name: "Java"
-            },
-            {
-                imageLink: "https://www.bridgetech.co.id/storage/2021/02/spring-logo.png",
-                altName: "Spring_Logo",
-                name: "Spring"
-            },
-            {
-                imageLink: "https://plugins.jetbrains.com/files/18622/305008/icon/pluginIcon.png",
-                altName: "SpringBoot_Logo",
-                name: "Spring Boot"
-            },
-            {
-                imageLink: "https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png",
-                altName: "SpringSecurity_Logo",
-                name: "Spring Security"
-            },
-            {
-                imageLink: "https://avatars.githubusercontent.com/u/45949248?s=200&v=4",
-                altName: "Lombok_Logo",
-                name: "Project Lombok"
-            },
-            {
-                imageLink: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png",
-                altName: "SQL_Logo",
-                name: "SQL"
             }
         ]
     },
 ];
 
+// Creates Project cards
 function createProjectCard(projectDetails){
     let projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
@@ -441,16 +512,6 @@ function createProjectCard(projectDetails){
     return projectCard;
 }
 
-function createProjectSlider(project){
-    let projectSlider = document.createElement("div");
-    projectSlider.classList.add("project-slider");
-
-    projectSlider.append(createProjectCard(project));
-
-    return projectSlider;
-    
-}
-
 let projectSlider = document.querySelector(".project-slider");
 
 projects.forEach(project => {
@@ -470,6 +531,7 @@ function updateSlider() {
 }
 
 function prevSlide() {
+    clearInterval(slideInterval);
     if (currentIndex > 0) {
         currentIndex--;
         updateSlider();
@@ -478,6 +540,7 @@ function prevSlide() {
 }
 
 function nextSlide() {
+    clearInterval(slideInterval);
     if (currentIndex < slides.length - 1) {
         currentIndex++;
         updateSlider();
@@ -496,9 +559,6 @@ function updateDots() {
     });
 }
 
-prevButton.addEventListener('click', prevSlide);
-nextButton.addEventListener('click', nextSlide);
-
 slides.forEach((_, index) => {
     const dot = document.createElement('div');
     dot.classList.add('dot');
@@ -511,3 +571,72 @@ slides.forEach((_, index) => {
 });
 
 updateDots();
+
+// Function to automatically switch to the next slide
+function autoSlide() {
+    if (currentIndex < slides.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateSlider();
+    updateDots();
+}
+
+// Function to start the auto slide interval
+function startAutoSlide() {
+    slideInterval = setInterval(autoSlide, 4000);
+}
+
+// Start the initial auto slide interval
+startAutoSlide();
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+
+dotsContainer.addEventListener('click', (event) => {
+    const dotIndex = Array.from(dotsContainer.children).indexOf(event.target);
+    if (dotIndex !== -1) {
+        clearInterval(slideInterval);
+        currentIndex = dotIndex;
+        updateSlider();
+        updateDots();
+    }
+});
+
+function sendEmail(){
+    emailjs.init("GhshwA9L7DSVyL0ll");
+
+    let params = {
+        senderName: contactForm.name.value,
+        subject: contactForm.subject.value,
+        message: contactForm.message.value,
+        replyTO: contactForm.email.value
+    };
+
+    const serviceID = "service_7xgn29i";
+    const templateID = "template_vnl89sd";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(response => {
+        alert("Message Send SuccessFully...!");
+    })
+    .catch(error => {
+        console.log(error);
+    })
+}
+
+
+// Send Email On submit
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+ 
+    sendEmail();
+
+    contactForm.name.value = "";
+    contactForm.email.value = "";
+    contactForm.subject.value = "";
+    contactForm.message.value = "";
+    
+})
