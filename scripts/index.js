@@ -8,6 +8,7 @@ let frontEndSkillCardContainer = document.getElementById("front-end-skill-cards"
 let backEndSkillCardContainer = document.getElementById("back-end-skill-cards");
 let builtToolsContainer = document.getElementById("built-tools");
 let softSkillsContainer = document.getElementById("soft-skills");
+
     
 // Function to toggle the sticky class on the navbar
 function toggleStickyNavbar() {
@@ -322,7 +323,89 @@ let projects = [
                 name: "SQL"
             }
         ]
-    }
+    },
+    {
+        projectTitle: "Customer Connect",
+        projectDescription: "Customer Connect is a console-based project designed as an Online Customer Service Center that allows users to create and manage customer issues and facilitate their resolution.",
+        projectImageSrc: "./images/projects/Customer_Connec_Logo.png",
+        projectImageSrcAlt: "Customer-connect-Logo",
+        projectGithubLink: "https://github.com/nmohammednawaz/Customer-Connect",
+        projectDeployedLink: "https://www.youtube.com/watch?v=65FYAnaQjeE&feature=youtu.be",
+        projectDemoLink: "https://www.youtube.com/watch?v=65FYAnaQjeE&feature=youtu.be",
+        projectTeckStacks: [
+            {
+                imageLink: "https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg",
+                altName: "Java_Logo",
+                name: "Java"
+            },
+            {
+                imageLink: "https://toppng.com/uploads/preview/hibernate-logo-11609364227r2rk6gphuk.png",
+                altName: "Hibernate_Logo",
+                name: "Hibernate"
+            },
+            {
+                imageLink: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png",
+                altName: "SQL_Logo",
+                name: "SQL"
+            }
+        ]
+    },
+    {
+        projectTitle: "Fabrica",
+        projectDescription: "An intuitive online platform for bus reservations, providing users easy booking while enabling admins to manage routes, buses, and users.",
+        projectImageSrc: "./images/projects/Fabrica_Logo.png",
+        projectImageSrcAlt: "Fabrica-Logo",
+        projectGithubLink: "https://github.com/nmohammednawaz/Fabrica",
+        projectDeployedLink: "https://book-my-bus.netlify.app/",
+        projectDemoLink: "#",
+        projectTeckStacks: [
+            {
+                imageLink: "https://icon-library.com/images/html5-icon/html5-icon-13.jpg",
+                altName: "HTML_Logo",
+                name: "HTML"
+            },
+            {
+                imageLink: "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
+                altName: "CSS_Logo",
+                name: "CSS"
+            },
+            {
+                imageLink: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                altName: "JavaScript_Logo",
+                name: "JavaScript"
+            },
+            {
+                imageLink: "https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg",
+                altName: "Java_Logo",
+                name: "Java"
+            },
+            {
+                imageLink: "https://www.bridgetech.co.id/storage/2021/02/spring-logo.png",
+                altName: "Spring_Logo",
+                name: "Spring"
+            },
+            {
+                imageLink: "https://plugins.jetbrains.com/files/18622/305008/icon/pluginIcon.png",
+                altName: "SpringBoot_Logo",
+                name: "Spring Boot"
+            },
+            {
+                imageLink: "https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png",
+                altName: "SpringSecurity_Logo",
+                name: "Spring Security"
+            },
+            {
+                imageLink: "https://avatars.githubusercontent.com/u/45949248?s=200&v=4",
+                altName: "Lombok_Logo",
+                name: "Project Lombok"
+            },
+            {
+                imageLink: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png",
+                altName: "SQL_Logo",
+                name: "SQL"
+            }
+        ]
+    },
 ];
 
 function createProjectCard(projectDetails){
@@ -368,9 +451,63 @@ function createProjectSlider(project){
     
 }
 
-let projectSliderContainer = document.getElementById("project-slider-container");
+let projectSlider = document.querySelector(".project-slider");
 
 projects.forEach(project => {
-    projectSliderContainer.append(createProjectSlider(project));
+    projectSlider.append(createProjectCard(project));
 })
 
+const slider = document.querySelector('.project-slider');
+const slides = document.querySelectorAll('.project-card');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const dotsContainer = document.querySelector('.dots-container');
+
+let currentIndex = 0;
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function prevSlide() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+        updateDots();
+    }
+}
+
+function nextSlide() {
+    if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateSlider();
+        updateDots();
+    }
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active-dot');
+        } else {
+            dot.classList.remove('active-dot');
+        }
+    });
+}
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+        updateDots();
+    });
+    dotsContainer.appendChild(dot);
+});
+
+updateDots();
