@@ -30,20 +30,38 @@ var typed = new Typed('#auto-typing-text', {
 });
 
 
-//   Scroll up button visibility
-window.addEventListener("scroll", function() {
+// //   Scroll up button visibility
+// Flag to track if the user has scrolled down
+var hasScrolled = false;
+
+// Function to toggle the visibility of the scroll-up button
+function toggleScrollUpButtonVisibility() {
     var homeSection = document.getElementById("home");
     var scrolled = window.scrollY;
 
-    if (scrolled < 700 && homeSection.getBoundingClientRect().bottom < window.innerHeight) {
-      // Hide the scroll-up button when the user is on the home section or when the bottom of the home section is visible in the viewport
-      scrollUpButton.style.display = "none";
+    if (scrolled < 700 && homeSection.getBoundingClientRect().bottom <= window.innerHeight) {
+        // Hide the scroll-up button when the user is on the home section or when the bottom of the home section is visible in the viewport
+        scrollUpButton.style.display = "none";
+        hasScrolled = false; // Reset the scroll flag
     } else {
-      // Show the scroll-up button in all other cases
-      scrollUpButton.style.display = "block";
-      scrollUpButton.style.position = "fixed";
+        // Show the scroll-up button in all other cases
+        scrollUpButton.style.display = "block";
+        if (hasScrolled) {
+            scrollUpButton.style.position = "fixed";
+        }
     }
+}
+
+// Attach a scroll event listener to the window
+window.addEventListener("scroll", function () {
+    if (!hasScrolled) {
+        hasScrolled = true;
+    }
+    toggleScrollUpButtonVisibility();
 });
+
+// Call the toggleScrollUpButtonVisibility function to initialize button visibility
+toggleScrollUpButtonVisibility();
 
 
 // Function to smoothly scroll to the top when the scroll-up button is clicked
