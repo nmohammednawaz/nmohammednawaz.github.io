@@ -33,7 +33,7 @@ var typed = new Typed('#auto-typing-text', {
 // //   Scroll up button visibility
 // Flag to track if the user has scrolled down
 var hasScrolled = false;
-
+scrollUpButton.style.display = "none";
 // Function to toggle the visibility of the scroll-up button
 function toggleScrollUpButtonVisibility() {
     var homeSection = document.getElementById("home");
