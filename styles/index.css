@@ -508,6 +508,16 @@ section{
 #contact-form > input[type='submit']:hover{
     background-color: #0B7841;
 }
+#successPopup{
+
+    display: none;
+    width: 200px;
+    justify-content: space-between;
+}
+.popup > p, .popup > i{
+    color: #1e9040;
+    font-weight: bold;
+}
 
 /* ------------------------------------------------------------ CSS for Footer ------------------------------------------------------------ */
 .footer{
