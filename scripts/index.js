@@ -593,7 +593,7 @@ function autoSlide() {
 
 // Function to start the auto slide interval
 function startAutoSlide() {
-    slideInterval = setInterval(autoSlide, 4000);
+    slideInterval = setInterval(autoSlide, 5000);
 }
 
 // Start the initial auto slide interval
