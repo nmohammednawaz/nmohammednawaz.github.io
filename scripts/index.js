@@ -9,7 +9,7 @@ let backEndSkillCardContainer = document.getElementById("back-end-skill-cards");
 let builtToolsContainer = document.getElementById("built-tools");
 let softSkillsContainer = document.getElementById("soft-skills");
 let contactForm = document.getElementById("contact-form");
-const successPopup = document.getElementById('successPopup');
+const successPopup = document.getElementById("successPopup");
 let slideInterval;
 
     
@@ -621,7 +621,7 @@ function sendEmail(){
         senderName: contactForm.name.value,
         subject: contactForm.subject.value,
         message: contactForm.message.value,
-        replyTO: contactForm.email.value
+        replyTo: contactForm.email.value
     };
 
     const serviceID = "service_7xgn29i";
@@ -632,7 +632,6 @@ function sendEmail(){
         setTimeout(function () {
             // Shows the success popup
             successPopup.style.display = 'flex';
-
             // Hides the success popup after 3 seconds
             setTimeout(function () {
                 successPopup.style.display = 'none';
@@ -643,7 +642,8 @@ function sendEmail(){
         }, 1000);
     })
     .catch(error => {
-        console.log(error);
+        successPopup.innerHTML = `<p>Please enter valid email Id</p>`
+
     })
 }
 
