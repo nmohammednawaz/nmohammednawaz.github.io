@@ -538,6 +538,20 @@ section{
 
 /* ------ CSS for Small Screens ------ */
 
+@media only screen and (max-width: 1480px) {
+    .project-tech-stack .skills-card{
+        width: 45px;
+        height: 60px;
+    }
+    .project-tech-stack .skills-card-img{
+        width: 28px;
+        height: 28px;
+    }
+    .project-tech-stack .skills-card-name{
+        font-size: 8px;
+    }
+}
+
 @media only screen and (max-width: 1130px){
     section{
         width: 90%;
@@ -685,6 +699,17 @@ section{
         margin: 2vh auto;
         row-gap: 5px;
         column-gap: 5px;
+    }
+    .project-tech-stack .skills-card-img{
+        width: 18px;
+        height: 18px;
+    }
+    .project-tech-stack .skills-card{
+        width: 28px;
+        height: 40px;
+    }
+    .project-tech-stack .skills-card-name{
+        font-size: 6px;
     }
     .project-links{
         padding-top: 0vh;
