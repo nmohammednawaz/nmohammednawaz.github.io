@@ -159,7 +159,7 @@ section{
     border-radius: 10px;
     border: 3px solid #1e9040;
     position: fixed;
-    bottom: 60px;
+    bottom: 70px;
     right: 60px;
     cursor: pointer;
 }
@@ -311,14 +311,14 @@ section{
 }
 
 /* ------ CSS for Project ----- */ 
-.project-slider-container{
+/* .project-slider-container{
     overflow: hidden;
 }
 .project-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
     border-radius: 20px;
-}
+} */
 .project-card {
     width: 95%;
     display: flex;
@@ -395,6 +395,8 @@ section{
 .project-links > a:hover{
     background-color: #303531;
 }
+
+/*
 .dots-container {
     text-align: center;
 }
@@ -429,6 +431,8 @@ section{
 .active-dot {
     background-color: #0E9E4D;
 }
+
+*/
   /* ----- CSS for Statistics ----- */
 .react-activity-calendar > img{
     display: block;
@@ -669,7 +673,14 @@ section{
         width: 90%;
     }
     .project-card > div:nth-child(1) {
-        display: none;
+        /* display: none; */
+        margin: 2vh auto;
+        width: 100%;
+    }
+    .project-tech-stack{
+        margin: 2vh auto;
+        row-gap: 5px;
+        column-gap: 5px;
     }
     .project-links{
         padding-top: 0vh;
@@ -700,11 +711,21 @@ section{
     .navbar-menu{
         margin-top: 70px;
     }
+    .menu li{
+        font-size: 16px;
+    }
     #home{
         margin: 15vh auto;
     }
+    .home-image img{
+        width: 180px;
+        height: 180px;
+    }
     .home-text{
         font-size: 16px;
+    }
+    .home-text p{
+        font-size: 14px;
     }
     .headings{
         width: 80%;
@@ -715,6 +736,9 @@ section{
     #connect-button{
         width: 60%;
     }
+    #user-detail-intro > p{
+        font-size: 14px;
+    }
     .about-skill > p > i{
         font-size: 16px;
     }
@@ -723,6 +747,12 @@ section{
     }
     .project-logo{
         height: 120px;
+    }
+    .project-title{
+        font-size: 22px;
+    }
+    .project-description{
+        font-size: 14px;
     }
     .controls{
         width: 60%;
