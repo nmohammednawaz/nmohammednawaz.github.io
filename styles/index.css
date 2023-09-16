@@ -600,6 +600,9 @@ section{
         right: 10px;
         padding: 8px;
     }
+    #resume-button-1{
+        font-size: 16px;
+    }
     #home{
         flex-direction: column-reverse;
         width: 85%;
@@ -710,7 +713,7 @@ section{
         max-width: 120px;
     }
     .navbar-menu{
-        margin-top: 70px;
+        margin-top: 68px;
     }
     .menu li{
         font-size: 16px;
