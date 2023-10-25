@@ -311,14 +311,14 @@ section{
 }
 
 /* ------ CSS for Project ----- */ 
-/* .project-slider-container{
+.project-slider-container{
     overflow: hidden;
 }
 .project-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
     border-radius: 20px;
-} */
+}
 .project-card {
     width: 95%;
     display: flex;
@@ -396,7 +396,6 @@ section{
     background-color: #303531;
 }
 
-/*
 .dots-container {
     text-align: center;
 }
@@ -432,8 +431,7 @@ section{
     background-color: #0E9E4D;
 }
 
-*/
-  /* ----- CSS for Statistics ----- */
+/* ----- CSS for Statistics ----- */
 .react-activity-calendar > img{
     display: block;
     width: 360px;

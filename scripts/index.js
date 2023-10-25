@@ -521,7 +521,6 @@ projects.forEach(project => {
     projectSlider.append(createProjectCard(project));
 })
 
-/*
 const slider = document.querySelector('.project-slider');
 const slides = document.querySelectorAll('.project-card');
 const prevButton = document.querySelector('.prev-button');
@@ -613,7 +612,6 @@ dotsContainer.addEventListener('click', (event) => {
         updateDots();
     }
 });
-*/
 
 // Function to send message(email)
 function sendEmail(){
