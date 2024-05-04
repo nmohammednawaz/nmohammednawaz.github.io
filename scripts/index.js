@@ -4,6 +4,7 @@ const navbar = document.getElementById('nav-menu');
 let scrollUpButton = document.getElementById("scroll-up");
 let hamburger = document.getElementById("hamburger");
 let navbarMenu = document.getElementById("navbar-menu");
+let navLink = document.getElementsByClassName("nav-link");
 let frontEndSkillCardContainer = document.getElementById("front-end-skill-cards");
 let backEndSkillCardContainer = document.getElementById("back-end-skill-cards");
 let builtToolsContainer = document.getElementById("built-tools");
@@ -78,11 +79,24 @@ scrollUpButton.addEventListener("click", function() {
     });
 });
 
+function toggleNavbar() {
+    if (window.matchMedia('(max-width: 1130px)').matches) {
+        hamburger.classList.toggle('active');
+        navbarMenu.classList.toggle('open');
+    }
+}
+
 // Toggle Hamburger
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navbarMenu.classList.toggle('open');
+    toggleNavbar();
 });
+
+for(i of navLink){
+    i.addEventListener("click", function(){
+        toggleNavbar();
+    })
+}
+
 
 
 // Function to create skillCard
@@ -131,7 +145,7 @@ const frontEndStacks = [
         name: "JSON Server"
     },
     {
-        imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+        imageLink: "https://miro.medium.com/v2/resize:fit:1400/1*CiVW0IQDeLIYO8uXrd-8dw.png",
         altName: "RestApi_Logo",
         name: "REST API"
     }
@@ -339,6 +353,11 @@ let projects = [
                 name: "JavaScript"
             },
             {
+                imageLink: "https://miro.medium.com/v2/resize:fit:1400/1*CiVW0IQDeLIYO8uXrd-8dw.png",
+                altName: "RestApi_Logo",
+                name: "REST API"
+            },
+            {
                 imageLink: "https://i.pinimg.com/564x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg",
                 altName: "Java_Logo",
                 name: "Java"
@@ -426,7 +445,7 @@ let projects = [
                 name: "JSON Server"
             },
             {
-                imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+                imageLink: "https://miro.medium.com/v2/resize:fit:1400/1*CiVW0IQDeLIYO8uXrd-8dw.png",
                 altName: "RestApi_Logo",
                 name: "REST API"
             }
@@ -462,7 +481,7 @@ let projects = [
                 name: "JSON Server"
             },
             {
-                imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+                imageLink: "https://miro.medium.com/v2/resize:fit:1400/1*CiVW0IQDeLIYO8uXrd-8dw.png",
                 altName: "RestApi_Logo",
                 name: "REST API"
             }
@@ -493,7 +512,7 @@ let projects = [
                 name: "JavaScript"
             },
             {
-                imageLink: "https://lh3.googleusercontent.com/-XvJzhz3pfH0/XjYG_xWkESI/AAAAAAAAJ9c/AYlgAtRknEU2W5fMcFhQoL6rmO8EBtIDQCK8BGAsYHg/s0/2020-02-01.png",
+                imageLink: "https://miro.medium.com/v2/resize:fit:1400/1*CiVW0IQDeLIYO8uXrd-8dw.png",
                 altName: "RestApi_Logo",
                 name: "REST API"
             }
