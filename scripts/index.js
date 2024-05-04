@@ -116,6 +116,11 @@ const frontEndStacks = [
         name: "JavaScript"
     },
     {
+        imageLink: "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+        altName: "React.js_Logo",
+        name: "React.js"
+    },
+    {
         imageLink: "https://cdn.icon-icons.com/icons2/2699/PNG/512/jquery_logo_icon_167804.png",
         altName: "jQuery_Logo",
         name: "jQuery"
@@ -278,10 +283,41 @@ softSkills.forEach((softSkill) => {
 
 // Projects Array
 let projects = [
+     {
+        projectTitle: "Tic-Tac-Toe",
+        projectDescription: "A basic Tic-Tac-Toe game built using React.js. It allows two players to take turns marking squares in a 3x3 grid. The game tracks player turns, identifies a winner, and handles draw scenarios.",
+        projectImageSrc: "./images/projects/Tic_Tac_Toe.png",
+        projectImageSrcAlt: "Tic-Tac-Toe",
+        projectGithubLink: "https://github.com/nmohammednawaz/Tic-Tac-Toe",
+        projectDeployedLink: "https://play-games-tic-tac-toe.netlify.app/",
+        projectDemoLink: "#",
+        projectTeckStacks: [
+            {
+                imageLink: "https://icon-library.com/images/html5-icon/html5-icon-13.jpg",
+                altName: "HTML_Logo",
+                name: "HTML"
+            },
+            {
+                imageLink: "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
+                altName: "CSS_Logo",
+                name: "CSS"
+            },
+            {
+                imageLink: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                altName: "JavaScript_Logo",
+                name: "JavaScript"
+            },
+            {
+                imageLink: "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+                altName: "React.js_Logo",
+                name: "React.js"
+            }
+        ]
+    },
     {
         projectTitle: "Book My Bus",
-        projectDescription: "An intuitive online platform for bus reservations, providing users easy booking while enabling admins to manage routes, buses, and users.",
-        projectImageSrc: "./images/projects/Book_My_Bus_Logo.png",
+        projectDescription: "Book my bus (bus ticket reservation system) is an RESTful web service designed to provide customers with a personalized easy-to-utilize user experience for booking and purchasing tickets online.",
+        projectImageSrc: "./images/projects/Book_My_Bus.png",
         projectImageSrcAlt: "Book-my-bus-Logo",
         projectGithubLink: "https://github.com/nmohammednawaz/Book-My-Bus",
         projectDeployedLink: "https://book-my-bus.netlify.app/",
@@ -363,7 +399,7 @@ let projects = [
     {
         projectTitle: "Fabrica",
         projectDescription: "Fabrica is a clone of webiste called Columbia.com which is an apparel and footwear company. It designs, develops, markets, and distributes apparel, footwear, accessories and equipment for men, kids, women and youth.",
-        projectImageSrc: "./images/projects/Fabrica_Logo.png",
+        projectImageSrc: "./images/projects/Fabrica.png",
         projectImageSrcAlt: "Fabrica-Logo",
         projectGithubLink: "https://github.com/nmohammednawaz/Fabrica",
         projectDeployedLink: "https://fabricaa.netlify.app/",
@@ -398,8 +434,8 @@ let projects = [
     },
     {
         projectTitle: "Violet Beaute",
-        projectDescription: "Violet Beaute is an e-commerce product-based web application, A website clone of purplle.com website",
-        projectImageSrc: "./images/projects/VioletBeaute_Logo.png",
+        projectDescription: "It is an e-commerce product-based web application. It has a variety of categories, just visit the products listing page, trending primer page or shampoo page and you will see all the products available in the website.",
+        projectImageSrc: "./images/projects/VioletBeaute.png",
         projectImageSrcAlt: "Violetbeaute-Logo",
         projectGithubLink: "https://github.com/nmohammednawaz/Violet-Beaute",
         projectDeployedLink: "https://violetbeaute.netlify.app/",
@@ -434,8 +470,8 @@ let projects = [
     },
     {
         projectTitle: "Jeevan Shailee",
-        projectDescription: "Jeevan Shailee is an e-commerce product-based web application, It is an e-commerce website clone of lifestylestores.com",
-        projectImageSrc: "./images/projects/JeevanShailee_Logo.png",
+        projectDescription: "Jeevan Shailee is an e-commerce product-based web application, It is an e-commerce website clone of lifestylestores.com where you can view products, add to the cart and checkout your products from the cart",
+        projectImageSrc: "./images/projects/JeevanShailee.png",
         projectImageSrcAlt: "JeevanShailee-Logo",
         projectGithubLink: "https://github.com/nmohammednawaz/JeevanShailee",
         projectDeployedLink: "https://jeevanshailee.netlify.app/",
@@ -494,8 +530,8 @@ function createProjectCard(projectDetails){
         </div>
     </div>
     <div>
-        <img src="${projectDetails.projectImageSrc}" alt="${projectDetails.projectImageSrcAlt}" class="project-logo">
         <h1 class="project-title">${projectDetails.projectTitle}</h1>
+        <img src="${projectDetails.projectImageSrc}" alt="${projectDetails.projectImageSrcAlt}" class="project-logo">
         <p class="project-description">${projectDetails.projectDescription}</p>
     </div>
     <div>
